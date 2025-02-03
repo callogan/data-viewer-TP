@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Data Viewer</title>
+</head>
+<body>
+    <h1>Data Viewer</h1>
+    <div>
+        <h2>Test Data</h2>
+        <ul>
+            {% for item in data.test %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Random Data</h2>
+        <ul>
+            {% for item in data.random %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <h2>Partially Generated Data</h2>
+        <ul>
+            {% for item in data.partially_generated %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html> 
